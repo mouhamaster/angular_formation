@@ -36,7 +36,7 @@
                   <span *ngIf="p.promotion==false">Promo On</span>
                 </button>
               </td>
-              <td>
+              <td *ngIf="authService.hasRole('admin')">
                  <button (click)="handleDeleteProduct(p)" class="btn btn-danger">
                    <i class="bi bi-trash"></i>
                  </button>
