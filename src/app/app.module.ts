@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductsComponent } from './products/products.component';
+import { CustomersComponent } from './customers/customers.component';
+import { CategoryComponent } from './category/category.component';
+import {ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductsComponent,
+    CustomersComponent,
+    CategoryComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
