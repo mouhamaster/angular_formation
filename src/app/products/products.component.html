@@ -1,4 +1,7 @@
 <div class="container">
+  <nav class="p-2 m-2 border-info" *ngIf="authService.hasRole('admin')">
+    <button class="btn btn-outline-info" (click)="handleNewProdcuct()">New Product</button>
+  </nav>
   <ng-template #errors>
     <div class="text-danger">{{errorMessage}}</div>
 
@@ -34,6 +37,11 @@
                 <button (click)="handleSetPromotion(p)"  [ngClass]="p.promotion==true?'btn-danger':'btn-success'" class="btn">
                  <span *ngIf="p.promotion==true">Promo Off</span>
                   <span *ngIf="p.promotion==false">Promo On</span>
+                </button>
+              </td>
+              <td *ngIf="authService.hasRole('admin')">
+                <button (click)="handleEditProduct(p)" class="btn btn-success">
+                  <i class="bi bg-info"></i>
                 </button>
               </td>
               <td *ngIf="authService.hasRole('admin')">

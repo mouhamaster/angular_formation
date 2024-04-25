@@ -6,6 +6,8 @@ import { CategoryComponent } from "./category/category.component";
 import { LoginComponent } from "./login/login.component";
 import { AdminTemplateComponent } from "./admin-template/admin-template.component";
 import {authenticationGuard} from "./guards/authentication.guard";
+import {NewProductComponent} from "./new-product/new-product.component";
+import {EditProductComponent} from "./edit-product/edit-product.component";
 
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
     children: [
       { path: "products", component: ProductsComponent },
       { path: "customers", component: CustomersComponent },
+      { path: "newProduct", component: NewProductComponent },
+      { path: "editProduct/:id", component: EditProductComponent },
     ]
   },
   { path: "categories", component: CategoryComponent }

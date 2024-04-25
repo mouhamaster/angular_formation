@@ -9,6 +9,8 @@ import { CategoryComponent } from './category/category.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './login/login.component';
 import { AdminTemplateComponent } from './admin-template/admin-template.component';
+import { NewProductComponent } from './new-product/new-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { AdminTemplateComponent } from './admin-template/admin-template.componen
     CustomersComponent,
     CategoryComponent,
     LoginComponent,
-    AdminTemplateComponent
+    AdminTemplateComponent,
+    NewProductComponent,
+    EditProductComponent
 
   ],
   imports: [
